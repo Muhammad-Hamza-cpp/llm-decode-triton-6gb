@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+
+# Profiler outputs too big for GitHub (100 MB file limit). The two batch-4 traces ship gzipped.
+results/02_trace_*.json
+results/*.pickle
+results/nsys_*
+results/ncu_*
+
+# LinkedIn post drafts
+posts/*.md

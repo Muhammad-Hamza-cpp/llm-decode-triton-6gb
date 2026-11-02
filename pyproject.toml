@@ -1,0 +1,24 @@
+[project]
+name = "llm-profiling"
+version = "0.1.0"
+description = "Profiling a 7B LLM (Mistral-7B, 4-bit) on a 6 GB GPU, and speeding up decode with Triton kernels"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "torch>=2.7",
+    "transformers>=4.46",
+    "accelerate>=1.0",
+    "bitsandbytes>=0.45",
+    "huggingface_hub>=0.26",
+    "pandas>=2.2",
+    "matplotlib>=3.9",
+    # torch 2.11 is built against Triton 3.6 (see its Linux pin); this is the Windows port
+    "triton-windows>=3.6,<3.7; sys_platform == 'win32'",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
