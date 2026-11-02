@@ -1,0 +1,212 @@
+{
+  "args": {
+    "prompt": 512,
+    "steps": 16,
+    "batch": 4,
+    "memory": false,
+    "stack": false
+  },
+  "prefill": {
+    "steps": 1,
+    "gpu_span_ms_per_step": 1799.936,
+    "cpu_ms_per_step": 1132.799,
+    "gpu_busy_ms_per_step": 1795.445,
+    "gpu_idle_pct": 0.2,
+    "kernels_per_step": 2774,
+    "avg_kernel_us": 647.2,
+    "time_by_category_pct": {
+      "matmul_gemm": 65.4,
+      "norm_act_elementwise": 26.2,
+      "4bit_gemv_dequant": 5.6,
+      "attention": 2.8,
+      "other": 0.0,
+      "memcpy_memset": 0.0
+    },
+    "top_kernels": [
+      {
+        "name": "_ZN7cutlass7Kernel2I68cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8EEvNT_6ParamsE",
+        "calls": 97,
+        "total_ms": 888.77,
+        "pct": 49.5,
+        "category": "matmul_gemm"
+      },
+      {
+        "name": "ampere_bf16_s1688gemm_bf16_128x128_ldg8_f2f_stages_32x1_tn",
+        "calls": 128,
+        "total_ms": 207.81,
+        "pct": 11.6,
+        "category": "matmul_gemm"
+      },
+      {
+        "name": "_Z20kDequantizeBlockwiseI13__nv_bfloat16Li512ELi64ELi8ELi2EEvPfPhS1_PT_ii",
+        "calls": 224,
+        "total_ms": 97.76,
+        "pct": 5.4,
+        "category": "4bit_gemv_dequant"
+      },
+      {
+        "name": "_ZN2at6native29vectorized_elementwise_kernelILi4EZNS0_25bfloat16_copy_kernel_cudaERNS_18TensorIteratorBaseEEUl",
+        "calls": 131,
+        "total_ms": 65.89,
+        "pct": 3.7,
+        "category": "norm_act_elementwise"
+      },
+      {
+        "name": "_ZN2at6native18elementwise_kernelILi128ELi2EZNS0_22gpu_kernel_impl_nocastINS0_15CUDAFunctor_addIfEEEEvRNS_18Te",
+        "calls": 256,
+        "total_ms": 52.1,
+        "pct": 2.9,
+        "category": "norm_act_elementwise"
+      },
+      {
+        "name": "_ZN43_GLOBAL__N__c5dc35cd_10_SoftMax_cu_0af7be2120softmax_warp_forwardIfffLi9ELb0ELb0EEEvPT0_PKT_iiiPKbib",
+        "calls": 32,
+        "total_ms": 50.99,
+        "pct": 2.8,
+        "category": "attention"
+      },
+      {
+        "name": "_ZN2at6native18elementwise_kernelILi128ELi2EZNS0_22gpu_kernel_impl_nocastIZZZNS0_49_GLOBAL__N__97375e57_16_Ten",
+        "calls": 64,
+        "total_ms": 47.61,
+        "pct": 2.7,
+        "category": "norm_act_elementwise"
+      },
+      {
+        "name": "ampere_sgemm_128x128_nn",
+        "calls": 32,
+        "total_ms": 39.12,
+        "pct": 2.2,
+        "category": "matmul_gemm"
+      },
+      {
+        "name": "ampere_sgemm_128x128_tn",
+        "calls": 32,
+        "total_ms": 37.93,
+        "pct": 2.1,
+        "category": "matmul_gemm"
+      },
+      {
+        "name": "_ZN2at6native29vectorized_elementwise_kernelILi4EZZZNS0_49_GLOBAL__N__97375e57_16_TensorCompare_cu_71e06f4e20i",
+        "calls": 32,
+        "total_ms": 32.17,
+        "pct": 1.8,
+        "category": "norm_act_elementwise"
+      },
+      {
+        "name": "_ZN2at6native27unrolled_elementwise_kernelIZZZNS0_23direct_copy_kernel_cudaERNS_18TensorIteratorBaseEENKUlvE1_",
+        "calls": 162,
+        "total_ms": 31.22,
+        "pct": 1.7,
+        "category": "norm_act_elementwise"
+      },
+      {
+        "name": "_ZN2at6native29vectorized_elementwise_kernelILi4ENS0_13BinaryFunctorIN3c108BFloat16ES4_S4_NS0_15binary_interna",
+        "calls": 32,
+        "total_ms": 30.91,
+        "pct": 1.7,
+        "category": "norm_act_elementwise"
+      }
+    ]
+  },
+  "decode_step": {
+    "steps": 16,
+    "gpu_span_ms_per_step": 115.382,
+    "cpu_ms_per_step": 154.993,
+    "gpu_busy_ms_per_step": 112.313,
+    "gpu_idle_pct": 2.7,
+    "kernels_per_step": 1782,
+    "avg_kernel_us": 63.0,
+    "time_by_category_pct": {
+      "matmul_gemm": 69.5,
+      "norm_act_elementwise": 30.4,
+      "attention": 0.1
+    },
+    "top_kernels": [
+      {
+        "name": "_Z23gemm_4bit_sm80_m16n8k16I13__nv_bfloat16Li32ELi128ELi128EEvPKT_PKhPKfS5_S7_S7_PS1_S3_iiiii",
+        "calls": 2560,
+        "total_ms": 983.12,
+        "pct": 54.7,
+        "category": "matmul_gemm"
+      },
+      {
+        "name": "_ZN2at6native18elementwise_kernelILi128ELi2EZNS0_22gpu_kernel_impl_nocastIZZZNS0_23direct_copy_kernel_cudaERNS",
+        "calls": 1024,
+        "total_ms": 248.98,
+        "pct": 13.9,
+        "category": "norm_act_elementwise"
+      },
+      {
+        "name": "_ZN2at6native29vectorized_elementwise_kernelILi4ENS0_13AUnaryFunctorIfffNS0_15binary_internal10MulFunctorIfEEE",
+        "calls": 1056,
+        "total_ms": 210.61,
+        "pct": 11.7,
+        "category": "norm_act_elementwise"
+      },
+      {
+        "name": "_ZN8internal5gemvx6kernelIiiffffLb1ELb1ELb0ELb0ELi8ELb0E18cublasGemvParamsExIi30cublasGemvTensorStridedBatched",
+        "calls": 512,
+        "total_ms": 116.51,
+        "pct": 6.5,
+        "category": "matmul_gemm"
+      },
+      {
+        "name": "_ZN8internal5gemvx6kernelIiiffffLb0ELb1ELb1ELb0ELi5ELb0E18cublasGemvParamsExIi30cublasGemvTensorStridedBatched",
+        "calls": 512,
+        "total_ms": 86.66,
+        "pct": 4.8,
+        "category": "matmul_gemm"
+      },
+      {
+        "name": "_Z23gemm_4bit_sm80_m16n8k16I13__nv_bfloat16Li32ELi64ELi128EEvPKT_PKhPKfS5_S7_S7_PS1_S3_iiiii",
+        "calls": 1024,
+        "total_ms": 39.05,
+        "pct": 2.2,
+        "category": "matmul_gemm"
+      },
+      {
+        "name": "_ZN2at6native27unrolled_elementwise_kernelIZZZNS0_23direct_copy_kernel_cudaERNS_18TensorIteratorBaseEENKUlvE1_",
+        "calls": 2592,
+        "total_ms": 35.46,
+        "pct": 2.0,
+        "category": "norm_act_elementwise"
+      },
+      {
+        "name": "_ZN2at6native40_GLOBAL__N__0b46c3ea_8_Shape_cu_85d9f36c30CatArrayBatchedCopy_vectorizedINS1_10OpaqueTypeILj2EE",
+        "calls": 1024,
+        "total_ms": 25.46,
+        "pct": 1.4,
+        "category": "norm_act_elementwise"
+      },
+      {
+        "name": "_ZN7cutlass7Kernel2I68cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x1_tn_align8EEvNT_6ParamsE",
+        "calls": 16,
+        "total_ms": 23.29,
+        "pct": 1.3,
+        "category": "matmul_gemm"
+      },
+      {
+        "name": "_ZN2at6native18elementwise_kernelILi128ELi4EZNS0_22gpu_kernel_impl_nocastINS0_13BinaryFunctorIN3c108BFloat16ES",
+        "calls": 3088,
+        "total_ms": 5.66,
+        "pct": 0.3,
+        "category": "norm_act_elementwise"
+      },
+      {
+        "name": "_ZN2at6native13reduce_kernelILi512ELi1ENS0_8ReduceOpIfNS0_7MeanOpsIffffEEjfLi4ELi4EEEEEvT1_",
+        "calls": 1040,
+        "total_ms": 3.13,
+        "pct": 0.2,
+        "category": "norm_act_elementwise"
+      },
+      {
+        "name": "_ZN2at6native40_GLOBAL__N__0b46c3ea_8_Shape_cu_85d9f36c19CatArrayBatchedCopyINS1_10OpaqueTypeILj2EEEjLi4ELi64E",
+        "calls": 1024,
+        "total_ms": 2.53,
+        "pct": 0.1,
+        "category": "norm_act_elementwise"
+      }
+    ]
+  }
+}
