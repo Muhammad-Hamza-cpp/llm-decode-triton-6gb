@@ -1,0 +1,106 @@
+{
+  "when": "2026-11-02 12:11:24",
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "vram_GB": 6.44,
+    "sm_count": 20,
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "model": "unsloth/mistral-7b-instruct-v0.3-bnb-4bit",
+    "sdpa_backend": "default"
+  },
+  "hardware": {
+    "bandwidth_GBps": 176.4,
+    "fp16_TFLOPS": 26.8,
+    "ridge_point_flops_per_byte": 151.8
+  },
+  "model_shape": {
+    "layers": 32,
+    "hidden": 4096,
+    "params_linear": 7113539584,
+    "params_total": 7247757312,
+    "kv_bytes_per_token": 131072,
+    "weight_bytes": 4027064832,
+    "decode_weight_bytes": 3758629376
+  },
+  "prefill": [
+    {
+      "prompt_tokens": 128,
+      "ttft_ms": 144.0,
+      "tokens_per_s": 889,
+      "achieved_TFLOPS": 12.64,
+      "pct_of_peak_compute": 47.2,
+      "arith_intensity": 452.2,
+      "peak_mem_GB": 4.18
+    },
+    {
+      "prompt_tokens": 512,
+      "ttft_ms": 493.1,
+      "tokens_per_s": 1038,
+      "achieved_TFLOPS": 14.77,
+      "pct_of_peak_compute": 55.1,
+      "arith_intensity": 1808.8,
+      "peak_mem_GB": 4.39
+    },
+    {
+      "prompt_tokens": 1024,
+      "ttft_ms": 1052.6,
+      "tokens_per_s": 973,
+      "achieved_TFLOPS": 13.84,
+      "pct_of_peak_compute": 51.6,
+      "arith_intensity": 3617.7,
+      "peak_mem_GB": 4.7
+    },
+    {
+      "prompt_tokens": 2048,
+      "ttft_ms": 2746.3,
+      "tokens_per_s": 746,
+      "achieved_TFLOPS": 10.61,
+      "pct_of_peak_compute": 39.6,
+      "arith_intensity": 7235.3,
+      "peak_mem_GB": 5.86
+    }
+  ],
+  "decode": [
+    {
+      "batch": 1,
+      "ms_per_step": 39.8,
+      "tokens_per_s": 25.1,
+      "achieved_GBps": 96.2,
+      "pct_of_peak_bw": 54.6,
+      "roofline_min_ms": 21.72,
+      "arith_intensity": 3.71,
+      "peak_mem_GB": 5.86
+    },
+    {
+      "batch": 2,
+      "ms_per_step": 53.36,
+      "tokens_per_s": 37.5,
+      "achieved_GBps": 73.1,
+      "pct_of_peak_bw": 41.5,
+      "roofline_min_ms": 22.12,
+      "arith_intensity": 7.29,
+      "peak_mem_GB": 4.54
+    },
+    {
+      "batch": 4,
+      "ms_per_step": 118.33,
+      "tokens_per_s": 33.8,
+      "achieved_GBps": 34.2,
+      "pct_of_peak_bw": 19.4,
+      "roofline_min_ms": 22.94,
+      "arith_intensity": 14.06,
+      "peak_mem_GB": 4.94
+    },
+    {
+      "batch": 8,
+      "ms_per_step": 171.16,
+      "tokens_per_s": 46.7,
+      "achieved_GBps": 25.3,
+      "pct_of_peak_bw": 14.4,
+      "roofline_min_ms": 24.57,
+      "arith_intensity": 26.26,
+      "peak_mem_GB": 5.73
+    }
+  ]
+}
