@@ -1,0 +1,125 @@
+{
+  "peak_bw_GBps": 155.8,
+  "rows": [
+    {
+      "B": 1,
+      "S": 128,
+      "stock_us": 48.8,
+      "triton_us": 19.9,
+      "speedup": 2.5,
+      "triton_pct_bw": 16.9,
+      "rel_err_triton": "2.1e-03",
+      "rel_err_stock": "2.2e-03"
+    },
+    {
+      "B": 1,
+      "S": 512,
+      "stock_us": 126.6,
+      "triton_us": 29.0,
+      "speedup": 4.4,
+      "triton_pct_bw": 46.4,
+      "rel_err_triton": "2.1e-03",
+      "rel_err_stock": "2.2e-03"
+    },
+    {
+      "B": 1,
+      "S": 2048,
+      "stock_us": 519.1,
+      "triton_us": 76.7,
+      "speedup": 6.8,
+      "triton_pct_bw": 70.2,
+      "rel_err_triton": "2.1e-03",
+      "rel_err_stock": "2.3e-03"
+    },
+    {
+      "B": 1,
+      "S": 4096,
+      "stock_us": 1067.3,
+      "triton_us": 154.2,
+      "speedup": 6.9,
+      "triton_pct_bw": 69.8,
+      "rel_err_triton": "2.1e-03",
+      "rel_err_stock": "2.3e-03"
+    },
+    {
+      "B": 4,
+      "S": 128,
+      "stock_us": 158.6,
+      "triton_us": 37.1,
+      "speedup": 4.3,
+      "triton_pct_bw": 36.3,
+      "rel_err_triton": "2.1e-03",
+      "rel_err_stock": "2.2e-03"
+    },
+    {
+      "B": 4,
+      "S": 512,
+      "stock_us": 505.3,
+      "triton_us": 85.5,
+      "speedup": 5.9,
+      "triton_pct_bw": 63.0,
+      "rel_err_triton": "2.1e-03",
+      "rel_err_stock": "2.2e-03"
+    },
+    {
+      "B": 4,
+      "S": 2048,
+      "stock_us": 1971.0,
+      "triton_us": 281.2,
+      "speedup": 7.0,
+      "triton_pct_bw": 76.6,
+      "rel_err_triton": "2.1e-03",
+      "rel_err_stock": "2.3e-03"
+    },
+    {
+      "B": 4,
+      "S": 4096,
+      "stock_us": 3796.8,
+      "triton_us": 531.1,
+      "speedup": 7.1,
+      "triton_pct_bw": 81.1,
+      "rel_err_triton": "2.1e-03",
+      "rel_err_stock": "2.3e-03"
+    },
+    {
+      "B": 8,
+      "S": 128,
+      "stock_us": 266.6,
+      "triton_us": 43.8,
+      "speedup": 6.1,
+      "triton_pct_bw": 61.4,
+      "rel_err_triton": "2.1e-03",
+      "rel_err_stock": "2.1e-03"
+    },
+    {
+      "B": 8,
+      "S": 512,
+      "stock_us": 1078.3,
+      "triton_us": 142.9,
+      "speedup": 7.5,
+      "triton_pct_bw": 75.4,
+      "rel_err_triton": "2.0e-03",
+      "rel_err_stock": "2.2e-03"
+    },
+    {
+      "B": 8,
+      "S": 2048,
+      "stock_us": 3759.7,
+      "triton_us": 561.6,
+      "speedup": 6.7,
+      "triton_pct_bw": 76.7,
+      "rel_err_triton": "2.0e-03",
+      "rel_err_stock": "2.2e-03"
+    },
+    {
+      "B": 8,
+      "S": 4096,
+      "stock_us": 7464.1,
+      "triton_us": 1004.2,
+      "speedup": 7.4,
+      "triton_pct_bw": 85.8,
+      "rel_err_triton": "2.1e-03",
+      "rel_err_stock": "2.3e-03"
+    }
+  ]
+}
